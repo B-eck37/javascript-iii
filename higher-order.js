@@ -93,5 +93,4 @@ let bobsTotal = purchases.reduce((accumulator, v) => {
     } else {
         return accumulator
     }
-}, 0)   
-// Your code here
+}, 0)
