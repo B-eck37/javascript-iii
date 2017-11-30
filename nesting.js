@@ -102,7 +102,8 @@ var cat = {
 // 1. Assign the value of Grumpy's 2nd activity to the variable below.
 // 2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 
-// Code here
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name// Code here
 
 var grumpyActivity;
 var fluffy2ndFriend;
@@ -142,7 +143,11 @@ var myCar = {
   ]
 }
 
-// Code here
+var recordCleaner = array => {
+  for(var key in array){
+    mycar[0].accidents
+  } 
+}// Code here
 
 
 
@@ -163,6 +168,11 @@ var myCar = {
 
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
-
+function looper(array){
+  for(i=0;i<array.length;i++){
+    for(j=0;j<array.length;j++){
+    }
+  }
+}
 
 
