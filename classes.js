@@ -90,8 +90,29 @@ Everytime they fire an employee they get $100 added to their bonus.
 call your class ProgressiveManager
 */
 
+class ProgressiveManager {
+    constructor(first,last,email,age){
+        this.first_name = first
+        this.last_name = last
+        this.email = email
+        this.age = age
+        this.reports = []
+        this.title = 'Not a manager'
+        this.bonus = 0
+        }
+        hire(employee){
+            this.reports.push(employee);
+            if(this.reports.length > 100){
+                this.title = 'Bestest Manager'
+            } else if (this.reports.length > 50){
+                this.title
+            }
+        }
+        fire(index){
+            this.bonus += 100
+        }
 
-
+///switch(key)
 
 /*
 BLACK DIAMOND
@@ -115,3 +136,25 @@ It can :
       It should set decrease wear_and_tear_count by 10, and set needs_reboot to false
 
 */
+
+class Machine {
+    constructor(){
+        this.widgets_made_count = 0
+        this.wear_and_tear_count = 0
+        this.needs_reboot = false
+    }
+
+makeWidget(num){
+    this.widgets_made_count += num
+    this.wear_and_tear_count += num / 50
+}
+fixMachine(){
+  this.needs_reboot = true
+}
+reboot(){
+    return () => {
+        this.wear_and_tear_count -= 10
+        this.needs_reboot = false
+    }
+}
+}
