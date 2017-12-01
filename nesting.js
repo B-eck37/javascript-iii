@@ -143,11 +143,13 @@ var myCar = {
   ]
 }
 
-var recordCleaner = array => {
-  for(var key in array){
-    mycar[0].accidents
-  } 
-}// Code here
+var recordCleaner(obj) => {
+for(var key in obj){
+  if(key === 'accidents')
+  return key.atFaultForAccidents = False
+}
+}
+console.log(recordCleaner(myCar))// Code here
 
 
 

@@ -102,15 +102,26 @@ class ProgressiveManager {
         }
         hire(employee){
             this.reports.push(employee);
-            if(this.reports.length > 100){
+            var len = this.reports.length;
+            if(len > 100){
                 this.title = 'Bestest Manager'
-            } else if (this.reports.length > 50){
-                this.title
+            } else if (len > 50){
+                this.title = 'Manager Plus'
+            } else if (len > 10){
+                this.title = 'Manager'
+            } else if (len > 3){
+                this.title = 'Mostly Manager'
+            } else if (len > 0){
+                this.title = 'Barely Manager'
+            } else {
+                this.title = 'Not a Manager'
             }
         }
         fire(index){
             this.bonus += 100
         }
+    }
+        
 
 ///switch(key)
 
@@ -144,14 +155,14 @@ class Machine {
         this.needs_reboot = false
     }
 
-makeWidget(num){
+    makeWidgets(num){
     this.widgets_made_count += num
     this.wear_and_tear_count += num / 50
 }
-fixMachine(){
-  this.needs_reboot = true
+        fixMachine(){
+    this.needs_reboot = true
 }
-reboot(){
+    reboot(){
     return () => {
         this.wear_and_tear_count -= 10
         this.needs_reboot = false
