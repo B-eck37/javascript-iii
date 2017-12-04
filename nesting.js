@@ -143,13 +143,47 @@ var myCar = {
   ]
 }
 
-var recordCleaner(obj) => {
-for(var key in obj){
-  if(key === 'accidents')
-  return key.atFaultForAccidents = False
+console.log(myCar.accidents[0].atFaultForAccident)
+
+function recordCleaner(){
+  for(var i=0;i<myCar.accidents.length;i++){
+    if(myCar.accidents[i].atFaultForAccident === true){
+      myCar.accidents[i].atFaultForAccident = false
+    }
+  }
+  return myCar
 }
-}
-console.log(recordCleaner(myCar))// Code here
+
+console.log(recordCleaner(myCar))
+// 1. Restate instructions in your own words
+// create a function that loops through an array of objects within an object in order to change a specific keys value
+
+// 2. Create some sample input data 
+// ???
+// 3. Create output data based on input data
+// ???
+// // 4. Create function signature
+// function(){ loop through object/array; find key; replace key value}
+
+// 5. Write the algorithm in English
+
+
+// 6. Identify Code Constructs (Pieces)
+
+
+// 7. Create pseudo-code
+// 8. Convert pseudo-code into code
+
+// var recordCleaner = obj => {
+// for(var key in obj){
+//   if(key === 'accidents'){
+//     for(i=0;i< key.accidents.length;i++){
+//       if(key.accidents[i] === key.accidents.at)
+//   return key.atFaultForAccidents = False
+//     }
+// }
+// }
+// }// Code here
 
 
 
@@ -170,11 +204,17 @@ console.log(recordCleaner(myCar))// Code here
 
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
-function looper(array){
-  for(i=0;i<array.length;i++){
-    for(j=0;j<array.length;j++){
+function looper(){
+  
+  for(var i=0;i<numsArr.length;i++){
+    for(var j=0;j<numsArr[i].length;j++){
+      numsArr[i][j % 2 === 0 ? numsArr[i][j] = 'even' : numsArr[i][j] = 'odd']
+      }
     }
+    return numsArr
   }
-}
+
+  console.log(looper(numsArr))
+
 
 

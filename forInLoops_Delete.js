@@ -59,7 +59,12 @@ function greaterThan10(obj){
 
 // Write a function called double that takes in an object. Write a for in loop that loops over the object and changes every value to be itself multipled by 2. Return the updated object.
 
-// CODE HERE
+function double(obj){
+ for(var key in obj){
+   obj[key]*=2
+ } 
+ return obj;
+}// CODE HERE
 
 
 
@@ -68,7 +73,12 @@ function greaterThan10(obj){
 
 // Write a function called secrets that will take in an object. Create an empty string variable. Write a for in loop that loops over the object. If the property name starts with an 'sh', concatenate the value to the string variable. By the end of the for in loop, you should have a sentence, return that sentence.
 
-// CODE HERE
+function secrets(obj){
+ var string = "" 
+ for(var key in obj){
+   
+ }
+}// CODE HERE
 
 
 // ========================
@@ -76,24 +86,28 @@ function greaterThan10(obj){
 
 // Sometimes it's needed to delete object properties. All you need is the word delete before a reference to the object property value. Uncomment the example below to see a for in loop deleting all the properties inside an object.
 
-// var deleteAllThethings = {
-//   one: 1,
-//   two: 2,
-//   three: 3
-// }
+var deleteAllThethings = {
+  one: 1,
+  two: 2,
+  three: 3
+}
 
-// for(var key in deleteAllThethings) {
-//   delete deleteAllThethings[key]
-// }
+for(var key in deleteAllThethings) {
+  delete deleteAllThethings[key]
+}
 
-// console.log(deleteAllThethings)
+console.log(deleteAllThethings)
 
 // ========================
 
 
 // Write a function called removePassword that takes in an object. Delete the property password and return the object.
 
-// CODE HERE
+function removePassword(obj){
+ for(var key in obj){
+   delete obj[key].property
+ } 
+}// CODE HERE
 
 
 
