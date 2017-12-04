@@ -105,9 +105,11 @@ console.log(deleteAllThethings)
 
 function removePassword(obj){
  for(var key in obj){
-   delete obj[key].property
+   delete obj[key]
  } 
-}// CODE HERE
+}
+
+console.log(removePassword({john: doe, Jane: doe, Elmo: doe}));// CODE HERE
 
 
 
@@ -123,7 +125,14 @@ var deleteTheBigNumbers = {
   fourth: 200
 }
 
-// CODE HERE
+function deleteKey(){
+  for(var key in deleteTheBigNumbers){
+    if(deleteTheBigNumbers[key] < 100){
+      delete deleteTheBigNumbers[key]
+    }
+  }
+  return deleteTheBigNumbers
+}// CODE HERE
 
 
 // ========================
@@ -131,7 +140,13 @@ var deleteTheBigNumbers = {
 
 // Write a function called startsWithK that takes an object as a parameter. Write a for in loop to loop over the object. If any property name starts with k, delete that property. Return the updated object.
 
-// CODE HERE
+function startsWithK(obj){
+ for(var key in obj){
+   if(obj[key].some()){
+
+   }
+ } 
+}// CODE HERE
 
 
 
@@ -141,4 +156,11 @@ var deleteTheBigNumbers = {
 // Write a function called hiddenTreasure that takes in an object. Write a for in loop that loops over this object. Each property will have a sentence as it's value. If the property value does not contain the word 'treasure', delete the property. Return the updated object.
 // (hint: the method includes() may be of use...)
 
-// CODE HERE
+function hiddenTreasure(obj){
+ for(var key in obj){
+   if(obj.key !== 'treasure'){
+     delete obj.key
+   }
+ } 
+ return obj
+}// CODE HERE
