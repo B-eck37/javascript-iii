@@ -75,10 +75,13 @@ function double(obj){
 
 function secrets(obj){
  var string = "" 
- for(var key in obj){
-   
- }
-}// CODE HERE
+//  var result = Object.keys(obj).map(function(key) {
+  for(var key in obj){
+    if(key[0] === 's' && key[1] === 'h')
+    string += obj[key]
+  }
+  return string
+ }// CODE HERE
 
 
 // ========================
@@ -104,12 +107,12 @@ console.log(deleteAllThethings)
 // Write a function called removePassword that takes in an object. Delete the property password and return the object.
 
 function removePassword(obj){
- for(var key in obj){
-   delete obj[key]
+  delete obj.password
+  return obj
  } 
-}
 
-console.log(removePassword({john: doe, Jane: doe, Elmo: doe}));// CODE HERE
+
+// CODE HERE
 
 
 
@@ -124,15 +127,14 @@ var deleteTheBigNumbers = {
   third: 110,
   fourth: 200
 }
-
-function deleteKey(){
   for(var key in deleteTheBigNumbers){
-    if(deleteTheBigNumbers[key] < 100){
+    
+    if(deleteTheBigNumbers[key] > 100){
       delete deleteTheBigNumbers[key]
     }
   }
-  return deleteTheBigNumbers
-}// CODE HERE
+ 
+// CODE HERE
 
 
 // ========================
@@ -142,10 +144,11 @@ function deleteKey(){
 
 function startsWithK(obj){
  for(var key in obj){
-   if(obj[key].some()){
-
+   if(key[0]==='k'){
+      delete obj[key];
    }
  } 
+ return obj
 }// CODE HERE
 
 
@@ -158,8 +161,8 @@ function startsWithK(obj){
 
 function hiddenTreasure(obj){
  for(var key in obj){
-   if(obj.key !== 'treasure'){
-     delete obj.key
+   if(!obj[key].includes('treasure')){
+     delete obj[key]
    }
  } 
  return obj

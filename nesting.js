@@ -208,13 +208,13 @@ function looper(){
   
   for(var i=0;i<numsArr.length;i++){
     for(var j=0;j<numsArr[i].length;j++){
-      numsArr[i][j % 2 === 0 ? numsArr[i][j] = 'even' : numsArr[i][j] = 'odd']
+      console.log(numsArr[i][j])
+      numsArr[i][j] % 2 === 0 ? numsArr[i][j] = 'even' : numsArr[i][j] = 'odd'
+      
       }
     }
     return numsArr
   }
-
-  console.log(looper(numsArr))
 
 
 
