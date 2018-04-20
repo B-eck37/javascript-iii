@@ -62,6 +62,23 @@ function employeeUpdater(){
 // 3. Return the updated array.
 
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
+                        //x    x      x      x     
+//i = 12, j = 7, 3, 56, 56, 29, 3, 44, 56, 12x
+//i = 7, j = 3, 56, 56, 29, 3, 44, 56
+//i = 3, j = 56, 56, 29, 3x
+//i = 56, j = 56x, 56x
+// function removeDuplicates(arr){
+//   for( i = arr.length - 1; i >= 0; i-- ){
+//    for( j = i - 1; j >= 0; j-- ){
+//      if( arr[i] === arr[j] ){
+//        console.log('inside', arr[i], arr[j])
+//        arr.splice(i, 1)
+//      }
+//    }
+//   }
+//   return arr;
+// }
+
 
 function removeDuplicates(arr){
   for(i=0;i<arr.length;i++){
@@ -73,18 +90,6 @@ function removeDuplicates(arr){
   return arr;
 }
    
-// Code here
-
-
-
-
-
-
-
-
-
-
-
 // === PROBLEM 3 ==========
 
 var cat = {
@@ -104,15 +109,6 @@ var cat = {
 
 var grumpyActivity = cat.catFriends[0].activities[1]
 var fluffy2ndFriend = cat.catFriends[1].name// Code here
-
-var grumpyActivity;
-var fluffy2ndFriend;
-
-
-
-
-
-
 
 // === PROBLEM 4 ==========
 
@@ -143,8 +139,6 @@ var myCar = {
   ]
 }
 
-console.log(myCar.accidents[0].atFaultForAccident)
-
 function recordCleaner(){
   for(var i=0;i<myCar.accidents.length;i++){
     if(myCar.accidents[i].atFaultForAccident === true){
@@ -153,45 +147,6 @@ function recordCleaner(){
   }
   return myCar
 }
-
-console.log(recordCleaner(myCar))
-// 1. Restate instructions in your own words
-// create a function that loops through an array of objects within an object in order to change a specific keys value
-
-// 2. Create some sample input data 
-// ???
-// 3. Create output data based on input data
-// ???
-// // 4. Create function signature
-// function(){ loop through object/array; find key; replace key value}
-
-// 5. Write the algorithm in English
-
-
-// 6. Identify Code Constructs (Pieces)
-
-
-// 7. Create pseudo-code
-// 8. Convert pseudo-code into code
-
-// var recordCleaner = obj => {
-// for(var key in obj){
-//   if(key === 'accidents'){
-//     for(i=0;i< key.accidents.length;i++){
-//       if(key.accidents[i] === key.accidents.at)
-//   return key.atFaultForAccidents = False
-//     }
-// }
-// }
-// }// Code here
-
-
-
-
-
-
-
-
 
 // === PROBLEM 5 ==========
 
